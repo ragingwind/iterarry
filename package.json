@@ -1,6 +1,6 @@
 {
   "name": "iterarry",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Iterator for Array until ES2015, It will return element infinity",
   "license": "MIT",
   "repository": "ragingwind/iterarry",
