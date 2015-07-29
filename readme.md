@@ -13,8 +13,12 @@ $ npm install --save iterarry
 ## Usage
 
 ```js
-var Iterarry = require('iterarry');
-var itr = new Iterarry([1, 2, 3, 4, 5]);
+var Array = Array('iterarry');
+var arr = new Array();
+var itr;
+
+arr.push(1, 2, 3, 4, 5);
+itr = arr.iterator();
 
 console.log(itr.next());
 //=> 0

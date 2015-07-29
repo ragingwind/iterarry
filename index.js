@@ -2,29 +2,32 @@
 
 var util = require('util');
 
-function Iterarry() {
-	Array.call(this);
-	Array.prototype.push.apply(this, Array.prototype.slice.call(arguments, 0));
+function Iterator(array) {
+	this._array = array;
 	this._cursor = -1;
 
 	return this;
 }
 
-util.inherits(Iterarry, Array);
+util.inherits(Iterator, Array);
 
-Iterarry.prototype.next = function () {
-  this._cursor = ++this._cursor % this.length;
-  return this[this._cursor];
+Iterator.prototype.next = function () {
+  this._cursor = ++this._cursor % this._array.length;
+  return this._array[this._cursor];
 };
 
-Iterarry.prototype.prev = function () {
+Iterator.prototype.prev = function () {
 	if (this._cursor <= 0) {
-		this._cursor = this.length - 1;
+		this._cursor = this._array.length - 1;
 	} else {
-  	this._cursor = (--this._cursor) % this.length;
+  	this._cursor = (--this._cursor) % this._array.length;
 	}
 
-  return this[this._cursor];
+  return this._array[this._cursor];
 };
 
-module.exports = Iterarry;
+Array.prototype.iterator = function () {
+	return new Iterator(this);
+};
+
+module.exports = Array;
