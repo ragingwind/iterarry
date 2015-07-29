@@ -1,4 +1,4 @@
-# iterarry [![Build Status](https://travis-ci.org/ragingwind/iterarry.svg?branch=master)](https://travis-ci.org/ragingwind/iterarry)
+# iterarry
 
 > Iterator for Array until ES2015, It will return element infinity
 
