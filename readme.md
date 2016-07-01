@@ -1,4 +1,6 @@
-# iterarry
+# iterarry 
+
+**WARN: WILL BE DEPRECATED**
 
 > Iterator for Array until ES2015, It will return element infinity
 
